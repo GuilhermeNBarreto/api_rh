@@ -17,8 +17,16 @@ $router->get('/', function () use ($router) {
     return "Api - RH";
 });
 
+//rotas dos funcionarios
 $router->get('/funcionario', 'FuncionarioController@obterTodos');
 $router->get('/funcionario/{id}', 'FuncionarioController@obterPorId');
 $router->post('/funcionario', 'FuncionarioController@salvar');
 $router->put('/funcionario/{id}', 'FuncionarioController@editar');
 $router->delete('/funcionario/{id}', 'FuncionarioController@excluir');
+
+//rotas das vagas
+$router->get('/vagas', 'VagasController@obterTodos');
+$router->get('/vagas/{id}', 'VagasController@obterPorId');
+$router->post('/vagas', 'VagasController@salvar');
+$router->put('/vagas/{id}', 'VagasController@editar');
+$router->delete('/vagas/{id}', 'VagasController@excluir');
